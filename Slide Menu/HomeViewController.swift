@@ -12,25 +12,36 @@ class HomeViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         setupNavigationItems()
     }
     
+    let menuVC = SlideMenuVC()
+    
+    private let menuWidth: CGFloat = 300
+    
     @objc func handleOpen() {
         
-        let menuVC = SlideMenuVC()
-        
-        menuVC.view.frame = CGRect(x: 0, y: 0, width: 300, height: view.frame.height)
+        menuVC.view.frame = CGRect(x: -menuWidth, y: 0, width: 300, height: view.frame.height)
         
         let mainWindow = UIApplication.shared.keyWindow
         mainWindow?.addSubview(menuVC.view)
         
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut) { [self] in
+            menuVC.view.transform = CGAffineTransform(translationX: menuWidth, y: 0)
+        }
+
         addChild(menuVC)
         
     }
     
     @objc func handleHide() {
-        print("Hiding menu...")
+        
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut) { [self] in
+            menuVC.view.transform = .identity
+        }
+        
+//        menuVC.view.removeFromSuperview()
+//        menuVC.removeFromParent()
     }
     
     fileprivate func setupNavigationItems() {
