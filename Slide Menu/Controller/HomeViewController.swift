@@ -9,6 +9,14 @@ import UIKit
 
 class HomeController: UITableViewController {
     
+    let menuController = SlideMenuVC()
+    
+    fileprivate let velocityOpenThreshold: CGFloat = 500
+    fileprivate let menuWidth: CGFloat = 300
+    fileprivate var isMenuOpened = false
+    
+    let darkCoverView = UIView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,8 +34,6 @@ class HomeController: UITableViewController {
         super.viewDidLayoutSubviews()
         setupMenuController()
     }
-    
-    let darkCoverView = UIView()
     
     fileprivate func setupDarkCoverView() {
         darkCoverView.alpha = 0
@@ -100,12 +106,6 @@ class HomeController: UITableViewController {
             }
         }
     }
-    
-    let menuController = SlideMenuVC()
-    
-    fileprivate let velocityOpenThreshold: CGFloat = 500
-    fileprivate let menuWidth: CGFloat = 300
-    fileprivate var isMenuOpened = false
     
     fileprivate func performAnimations(transform: CGAffineTransform) {
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
