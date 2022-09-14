@@ -46,6 +46,7 @@ class HomeController: UITableViewController {
     
     fileprivate func setupPanGesture() {
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(handlePan))
+        panGesture.delegate = self
         view.addGestureRecognizer(panGesture)
     }
     
@@ -167,5 +168,18 @@ class HomeController: UITableViewController {
         
     }
 
+}
+
+extension HomeController: UIGestureRecognizerDelegate {
+    
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        
+        
+        
+    }
 }
 

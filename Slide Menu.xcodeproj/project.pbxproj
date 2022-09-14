@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		526E177228D06A2900CC3BC0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526E177128D06A2900CC3BC0 /* SceneDelegate.swift */; };
+		526E177528D0B82200CC3BC0 /* BaseSlidingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526E177428D0B82200CC3BC0 /* BaseSlidingController.swift */; };
 		527D483628CF1EE700F00CB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527D483528CF1EE700F00CB4 /* AppDelegate.swift */; };
 		527D483A28CF1EE700F00CB4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527D483928CF1EE700F00CB4 /* HomeViewController.swift */; };
 		527D483F28CF1EE700F00CB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 527D483E28CF1EE700F00CB4 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		526E177128D06A2900CC3BC0 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		526E177428D0B82200CC3BC0 /* BaseSlidingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSlidingController.swift; sourceTree = "<group>"; };
 		527D483228CF1EE700F00CB4 /* Slide Menu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Slide Menu.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		527D483528CF1EE700F00CB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		527D483928CF1EE700F00CB4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +39,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		526E177328D0B7FB00CC3BC0 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				526E177428D0B82200CC3BC0 /* BaseSlidingController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		527D482928CF1EE700F00CB4 = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +79,7 @@
 		527D484928CF25BF00F00CB4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				526E177328D0B7FB00CC3BC0 /* Base */,
 				527D483928CF1EE700F00CB4 /* HomeViewController.swift */,
 				527D484A28CF264500F00CB4 /* SlideMenuVC.swift */,
 			);
@@ -149,6 +160,7 @@
 				527D483628CF1EE700F00CB4 /* AppDelegate.swift in Sources */,
 				527D484B28CF264500F00CB4 /* SlideMenuVC.swift in Sources */,
 				526E177228D06A2900CC3BC0 /* SceneDelegate.swift in Sources */,
+				526E177528D0B82200CC3BC0 /* BaseSlidingController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
